@@ -144,7 +144,7 @@
     "controllable.settings.tab.bindings.title": "Bindings",
     "controllable.settings.tab.controller.title": "Controller",
     "controllable.settings.tab.settings.title": "Settings",
-    "controllable.sprint_mode.once": "Once",
+    "controllable.sprint_mode.hold": "Hold",
     "controllable.sprint_mode.toggle": "Toggle",
     "controllable.tooltip.more_recipes": "Press %s to View More",
     "framework_config.controllable.client.client.options.autoSelect": "Auto Select",

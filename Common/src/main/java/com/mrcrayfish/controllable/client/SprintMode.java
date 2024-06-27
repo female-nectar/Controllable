@@ -8,7 +8,7 @@ import com.mrcrayfish.controllable.client.settings.SettingEnum;
 public enum SprintMode implements SettingEnum
 {
     TOGGLE("controllable.sprint_mode.toggle"),
-    ONCE("controllable.sprint_mode.once");
+    HOLD("controllable.sprint_mode.hold");
 
     private final String key;
 

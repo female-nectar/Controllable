@@ -273,7 +273,7 @@ public class SettingsScreen extends Screen
                 mc.options.save();
             }));
             optionsList.addEntry(new TabOptionEnumItem<>(Component.translatable("controllable.gui.sprint_mode"), Component.translatable("controllable.gui.sprint_mode.desc"), () -> {
-                return mc.options.toggleSprint().get() ? SprintMode.TOGGLE : SprintMode.ONCE;
+                return mc.options.toggleSprint().get() ? SprintMode.TOGGLE : SprintMode.HOLD;
             }, sprintMode -> {
                 mc.options.toggleSprint().set(sprintMode == SprintMode.TOGGLE);
                 mc.options.save();

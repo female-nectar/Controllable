@@ -671,6 +671,10 @@ public class ControllerInput
             }
             else if(mc.screen == null)
             {
+                if(!ButtonBindings.SPRINT.isButtonPressed() && !mc.options.toggleSprint().get())
+                {
+                    mc.options.keySprint.setDown(false);
+                }
                 if(ButtonBindings.OPEN_INVENTORY.isButtonPressed() && mc.gameMode != null && mc.player != null)
                 {
                     if(mc.gameMode.isServerControlledInventory())
@@ -687,16 +691,7 @@ public class ControllerInput
                 {
                     if(mc.player != null)
                     {
-                        LocalPlayer player = mc.player;
-                        boolean canSprint = !player.isSprinting() && !player.hasEffect(MobEffects.BLINDNESS);
-                        boolean hasRequiredFood = (float) player.getFoodData().getFoodLevel() > 6.0F || player.getAbilities().mayfly;
-                        boolean hasImpulse = player.isUnderWater() ? player.input.hasForwardImpulse() : (double) player.input.forwardImpulse >= 0.8D;
-                        boolean canSwimInFluid = ClientServices.CLIENT.canLocalPlayerSwimInFluid(player);
-                        boolean usingItem = player.isUsingItem();
-                        if(canSprint && canSwimInFluid && hasImpulse && hasRequiredFood && !usingItem)
-                        {
-                            player.setSprinting(true);
-                        }
+                        mc.options.keySprint.setDown(true);
                     }
                 }
                 else if(ButtonBindings.SNEAK.isButtonPressed())
@@ -811,6 +806,7 @@ public class ControllerInput
                         }
                     }
                 }
+
             }
             else
             {

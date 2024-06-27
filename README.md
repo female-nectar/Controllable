@@ -17,10 +17,14 @@ I noticed a lack of support for controller for the Java Edition of Minecraft, th
 * Sony PS4 Wireless Controller (via USB)
 * Other controllers coming soon!
 
-**Note:** Support for other controllers will be a community effort. Once the controller mapping system is added, I will be accepting pull requests on GitHub for controller mappings. This is simply because I do not have access to different types of controllers.
+**Note:** Support for other controllers will be a community effort. Once the controller mapping system is added, <br>
+I will be accepting pull requests on GitHub for controller mappings. <br>
+This is simply because I do not have access to different types of controllers.
 
 ### Developers:
-If you are a developer and want to add Controllable support to your own mod, you can simply do so by adding this to your build.gradle file.
+If building fails, try: `./gradlew wrapper --gradle-version latest` <br>
+If Forge builds fails, comment out: `signJar.mustRunAfter tasks.reobfJarJar`<br>
+To add Controllable support to your own mod, you can simply do so by adding this to your build.gradle file.
 
 ```gradle
 repositories {
